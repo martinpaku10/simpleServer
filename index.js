@@ -7,6 +7,7 @@ import newUserModel from "./SimpleSchema/user_simpleSchema.js"
 
 
 const app=express()
+const port=process.env.PORT||8000
 dotenv.config()
 app.use(cors())
 app.use(express.json())
@@ -68,6 +69,6 @@ app.post("/createUser",async(req,res)=>{
 })
 
 
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log("Server running")
 })
